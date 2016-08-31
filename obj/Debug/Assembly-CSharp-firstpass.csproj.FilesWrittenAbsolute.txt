@@ -1,0 +1,17 @@
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Volumes/Software/Snake Drop/obj/Debug/Assembly-CSharp-firstpass.dll
+/Volumes/Software/Snake Drop/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Volumes/Software/Snake Drop/Temp/bin/Debug/UnityEngine.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/UnityEditor.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/UnityEngine.UI.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/UnityEngine.Networking.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Mono.Cecil.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Unity.DataContract.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Unity.CecilTools.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Volumes/Software/Snake Drop/Temp/bin/Debug/Mono.Cecil.Mdb.dll
