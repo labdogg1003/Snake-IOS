@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject mainCamera;
 
     public Text lblScore;
+    public Text lblScoreEndGame;
 
 
     // Static singleton property
@@ -54,10 +55,10 @@ public class UIManager : MonoBehaviour
                 break;
             case UIState.endGame:
                 mainMenu.gameObject.SetActive(false);
-                inGame.gameObject.SetActive(true);
+                inGame.gameObject.SetActive(false);
                 endScreen.gameObject.SetActive(true);
 
-                lblScore.transform.position = new Vector3(177, 314 + 190, 0);
+                lblScoreEndGame.text = gameManager.Instance.score.ToString();
                 mainCamera.GetComponent<BlurOptimized>().enabled = true;
                 break;
         }

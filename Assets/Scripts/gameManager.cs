@@ -4,7 +4,7 @@ using System.Collections;
 
 public class gameManager : MonoBehaviour 
 {
-    int score = 0;
+    public int score = 0;
     public Text txtScore;
     public Tile[] tiles;
     public GameObject pellet;
