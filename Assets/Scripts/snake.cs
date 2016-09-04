@@ -17,7 +17,7 @@ public class snake : MonoBehaviour
 	Direction lastInput;
     CachedInput cachedInput;
     Vector3 lastKnownPosition;
-    int maxLength = 6;
+    public int maxLength = 6;
     public GameObject snakeBody;
    // public GameObject pseudoHead;
     bool died = false;
@@ -53,10 +53,14 @@ public class snake : MonoBehaviour
 
         cacheInput();
 
-        if (triggerCount <= 0 || died == true) 
-		{
-			StartCoroutine ("die");
-		}
+        if (triggerCount <= 0 || died == true)
+        {
+            StartCoroutine("die");
+        }
+        else if (gameManager.Instance.paused == true)
+        {
+            //Stop game play
+        }
 		else 
 		{
 			move ();

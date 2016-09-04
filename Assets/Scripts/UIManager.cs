@@ -15,13 +15,14 @@ public class UIManager : MonoBehaviour
     public Text lblScore;
     public Text lblScoreEndGame;
 
+    public Button btnPause;
+    public Sprite play;
 
     // Static singleton property
     public static UIManager Instance { get; private set; }
 
     void Awake()
     {
-
         // Save a reference to the AudioHandler component as our singleton instance
         Instance = this;
     }
@@ -67,5 +68,19 @@ public class UIManager : MonoBehaviour
     public void restartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("SnakeDown");
+    }
+
+    public void btnPauseGame()
+    {
+        bool paused = gameManager.Instance.pauseGame();
+
+        if (paused)
+        {
+            btnPause.GetComponent<Image>().overrideSprite = play;
+        }
+        else
+        {
+            btnPause.GetComponent<Image>().overrideSprite = null;
+        }
     }
 }

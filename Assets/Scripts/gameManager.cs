@@ -4,46 +4,62 @@ using System.Collections;
 
 public class gameManager : MonoBehaviour 
 {
+    //Score
     public int score = 0;
     public Text txtScore;
+
+    //In Game Assets
     public Tile[] tiles;
     public GameObject pellet;
+
+    //Game Time
+    public bool paused = false;
     public float seconds = 0.0f;
     public float minutes = 0.0f;
     public float hours = 0.0f;
-    public bool died = false;
+    public Text lblTime;
+
+    //UI instance
     private UIManager _uiManager;
     public GameObject endGameUI;
-    public Text lblTime;
+
+    //Game Settings
 	public int targetFrameRate = 75;
+
+    //player State
+    public bool died = false;
 
     // Static singleton property
     public static gameManager Instance { get; private set; }
 
     void Awake()
     {
-
-        // Save a reference to the AudioHandler component as our singleton instance
         Instance = this;
 		//Application.targetFrameRate = targetFrameRate;
         //QualitySettings.vSyncCount = 0;  // VSync must be disabled
     }
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
     {
-        Screen.SetResolution (354, 629, false);
+        //Screen.SetResolution (354, 629, false);  //TODO - DELETE IF UNECESSARY
+
+        //Reset the player state
         died = false;
+
+        //Get all the tiles on the board
         tiles = GameObject.FindObjectsOfType<Tile>();
+
+        //add the 
         GameObject p = Instantiate(pellet);
         p.transform.position = tiles[Random.Range( 0, tiles.Length )].pelletLocation;   
 
         GameObject p1 = Instantiate(pellet);
         p1.transform.position = tiles[Random.Range( 0, tiles.Length )].pelletLocation;  
 
+
         updateUI();
         _uiManager = this.gameObject.GetComponent<UIManager>();
-        endGameUI.GetComponent<CanvasGroup>().alpha = 0;
 	}
 	
 	// Update is called once per frame
@@ -109,6 +125,25 @@ public class gameManager : MonoBehaviour
 
         lblTime.text = minutes + " : " + ((int)seconds).ToString("00");
 
+    }
+
+    //Game Pause Boolean Toggle
+    public bool pauseGame()
+    {
+        if (paused == false)
+        {
+            //pauses the game and sets the game speed to 0
+            Time.timeScale = 0;
+            paused = true;
+        }
+        else
+        {
+            //unpauses the game and sets the game speed to 1
+            Time.timeScale = 1;
+            paused = false;
+        }
+
+        return paused;
     }
 
 
