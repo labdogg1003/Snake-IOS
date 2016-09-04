@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
                 mainMenu.gameObject.SetActive(true);
                 inGame.gameObject.SetActive(false);
                 endScreen.gameObject.SetActive(false);
+                gameManager.Instance.paused = true;
 
                 mainCamera.GetComponent<BlurOptimized>().enabled = false;
                 break;
@@ -68,8 +69,14 @@ public class UIManager : MonoBehaviour
     public void restartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("SnakeDown");
+        setState();
     }
 
+    public void quitGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SnakeDownTitle");
+    }
+        
     public void btnPauseGame()
     {
         bool paused = gameManager.Instance.pauseGame();
@@ -82,5 +89,10 @@ public class UIManager : MonoBehaviour
         {
             btnPause.GetComponent<Image>().overrideSprite = null;
         }
+    }
+
+    public void setState()
+    {
+        this.gameState = UIState.inGame;
     }
 }

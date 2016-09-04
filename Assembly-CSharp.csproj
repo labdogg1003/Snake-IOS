@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\GridMove.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\PooledObject.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SnakeDown.unity
+- path: Assets/SnakeDownTitle.unity
   isLoaded: 1
   isActive: 1
